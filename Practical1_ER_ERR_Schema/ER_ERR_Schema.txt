@@ -1,0 +1,49 @@
+Entities and Attributes:
+An entity represents a real-world object or concept. Attributes are the properties or characteristics of an entity.
+
+1.CUSTOMER
+customer_id (PK): Unique identifier for a customer.
+name: Name of the customer.
+address: Address of the customer.
+phone: Phone number of the customer.
+email: Email address of the customer.
+
+2.BOOKING
+booking_id (PK): Unique identifier for a booking.
+booking_date: Date when the booking was made.
+num_passengers: Number of passengers in the booking.
+payment_status: Status of the payment for the booking.
+
+3.TRIP
+trip_id (PK): Unique identifier for a trip.
+destination: Destination of the trip.
+start_date: Start date of the trip.
+end_date: End date of the trip.
+type: Type of trip (e.g., "Adventure," "Relaxation").
+price: Price of the trip.
+
+4.HOTEL
+hotel_id (PK): Unique identifier for a hotel.
+name: Name of the hotel.
+location: Location of the hotel.
+stars: Star rating of the hotel.
+room_price: Price of a room in the hotel.
+
+5.FLIGHT
+flight_id (PK): Unique identifier for a flight.
+airline: Name of the airline.
+departure_airport: Airport from which the flight departs.
+arrival_airport: Airport at which the flight arrives.
+departure_time: Date and time of departure.
+arrival_time: Date and time of arrival.
+price: Price of the flight.
+
+Relationships:
+1.Relationships define how entities are related to each other.
+2.CUSTOMER makes BOOKING: A customer can make one or more bookings. The relationship is one-to-many from CUSTOMER to BOOKING.
+3.BOOKING includes TRIP: A booking can include one or more trips. The relationship is one-to-many from BOOKING to TRIP.
+4.TRIP stays HOTEL: A trip can stay at one or more hotels. The relationship is one-to-many from TRIP to HOTEL.
+5.TRIP uses FLIGHT: A trip can use one or more flights. The relationship is one-to-many from TRIP to FLIGHT.
+
+In summary:
+The ER diagram represents a database design for a tourism management system. It captures the essential entities (customers, bookings, trips, hotels, and flights) and their attributes, along with the relationships between them. This design can be used to create a relational database to store and manage tourism-related data.
